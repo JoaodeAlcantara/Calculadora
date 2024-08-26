@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <input class="display" readonly>
+
+        <button class="grayButton" onclick="apagar()">AC</button>
+        <button class="grayButton" onclick="inverter()">+/-</button>
+        <button class="blueButton" onclick="addCaracter('/')">/</button>
+        <button class="blueButton" onclick="addCaracter('*')">*</button>
+        <button class="blackButton" onclick="addCaracter('7')">7</button>
+        <button class="blackButton" onclick="addCaracter('8')">8</button>
+        <button class="blackButton" onclick="addCaracter('9')">9</button>
+        <button class="blueButton" onclick="addCaracter('-')">-</button>
+        <button class="blackButton" onclick="addCaracter('4')">4</button>
+        <button class="blackButton" onclick="addCaracter('5')">5</button>
+        <button class="blackButton" onclick="addCaracter('6')">6</button>
+        <button class="blueButton" onclick="addCaracter('+')">+</button>
+        <button class="blackButton" onclick="addCaracter('1')">1</button>
+        <button class="blackButton" onclick="addCaracter('2')">2</button>
+        <button class="blackButton" onclick="addCaracter('3')">3</button>
+        <button class="equal" onclick="calcular()">=</button>
+        <button class="zero" onclick="addCaracter('0')">0</button>
+        <button class="blackButton" onclick="addCaracter('.')">.</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
