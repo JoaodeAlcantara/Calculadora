@@ -1,16 +1,28 @@
+const display = document.querySelector('.display')
 function addCaracter(carac){
-    const valorInput = document.querySelector('.display').value
-    document.querySelector('.display').value = valorInput + carac
+    const valorInput = display.value
+    console.log('valor atual dos input: '+valorInput)
+    console.log('carac a adicionar: '+ carac)
+
+    if (valorInput.length > 0) {
+        const ultimoCaractere = valorInput.charAt(valorInput.length -1);
+        console.log('Último caractere:', ultimoCaractere);
+
+        if (['+', '-', '*', '/'].includes(ultimoCaractere) && ['+', '-', '*', '/'].includes(carac)) {
+            console.log('Dois sinais consecutivos detectados. Caractere não adicionado.');
+            return;
+        }
+    }
+    display.value = valorInput + carac
+    console.log('novo valor do input: '+ display.value)
 }
 function apagar(){
-    document.querySelector('.display').value =''
+    display.value =''
 }
 function calcular(){
-    const valorInput = document.querySelector('.display').value
-    document.querySelector('.display').value = eval(valorInput)
+    display.value = eval(display.value)
 
 }
 function inverter(){
-    const valorInput = document.querySelector('.display').value
-    document.querySelector('.display').value = valorInput * -1  
+    display.value *= -1
 }
